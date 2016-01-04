@@ -9,59 +9,289 @@
   <body>
     <article>
       <section>
+        <h2><img src="images/wit_crest.png"><i>Waterford institute of technology</i></h2>
         <h1>Final Year Project Presentation</h1>
+        <h2>Development of a platform for the consumption of media in sync on multiple clients</h2>
       </section>
       <section>
-        <h2>Keyboard Interaction</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a></h3>
+        <h1>MediaSync</h1>
+        <h3>Developed by: <a href="http://glenkeane.me/about/">Glen Keane</a></h3>
+        <h3>Student number: 20057974</h3>
+        <h3>Course: BSc (Hons) in Applied Computing</h3>
+        <h3>Supervisor: Colm Dunphy</h3>
       </section>
       <section>
-        <h2>Touch Interaction</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a></h3>
+        <h1>What is it?</h1>
       </section>
       <section>
-        <h2>Responsive Slides</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a></h3>
+        <h2>Well, my abstract says...</h2>
+        <p>MediaSync is a full solution to synchronised consumption of media (video & audio) online with other people. It is a responsive online application which will allow multiple users (clients) in a virtual room the ability to control the playback of media for other users in that room. The result being that they will all see the same thing at the same time (with a delay of up to 4 seconds).</p>
+        <p>While the synchronization technology is the main feature of the application, an interactive social media application has been developed to utilise this technology. This application will have an advanced permission system built around the control of playback and user entry into rooms. This application is designed to be a social media service to enable the sharing of what they are currently watching with their friends or family.</p>
       </section>
       <section>
-        <h2>Bullet List</h2>
-        <h3 class="bullet">Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a></h3>
+        <h2>What this means is that...</h2>
         <ul>
-          <li>Bullet 1</li>
-          <li>Bullet 2</li>
-          <li>Bullet 3</li>
+          <li>It is a responsive website</li>
+          <li>It allows you to consume media in sync with other connected users</li>
+          <li>It allows users to dynamically control playback of media and everyone else connected stays in sync</li>
+          <li>It's an online social service you can sign up for</li>
+          <li>When you sign up, you get extra features 
+            <ul>
+              <li>Like controlling permissions in a media room you create</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <Section>
+        <h1>Why are things done like they are?!</h1>
+      </Section>
+      <section>
+        <h2>So wait... What's a media room?</h2>
+        <ul>
+          <li>There are many providers of media online, who all provide similar interfaces</li>
+          <li>The basic premise is that users can create their own areas on my service </li>
+          <li>Within these areas, they can consume/queue media from online providers with their friends</li>
+          <li>This area is a Room</li>
+          <li>Rooms have unique urls for sharing and identifying them</li>
+          <li>Within these Rooms, people play media</li>
+          <li>Anyone who joins these Room will then see the media which is currently playing.</li>
+          <li>Most importantly: in synch</li>
+        </ul>
+      </section>
+      <section data-bespoke-hash="demo1">
+        <h2>Heres a little demo of how the synchronisation works, from my first prototype:</h2>
+        <video src="videos/func-demo.mp4" controls></video>
+        <p>Note: This is not the UI I am using in my project</p>
+      </section>
+      <section>
+        <h2>Heres a mindmap of the rooms components</h2><img src="images/room-mindmap.png" style="height:50%;width50%;">
+      </section>
+      <section>
+        <h1>The permissions system</h1>
+        <p>In my report, I outline a permissions system for rooms</p>
+        <p>The permissions system allows users to configure</p>
+        <ul>
+          <li>A Room Type</li>
+          <li>Playback control/restriction</li>
+          <li>User classes within the room</li>
         </ul>
       </section>
       <section>
-        <h2>Syntax Highlighting</h2>
-        <h3>Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a></h3>
-        <pre><code class="language-javascript">bespoke.from('article', [
-  classes(),
-  keys(),
-  touch(),
-  bullets('li, .bullet')
-]);
-</code></pre>
+        <h1>Room types</h1>
+        <p>Rooms can be one of three types</p>
+        <ul>
+          <li>Public - Anyone can enter it</li>
+          <li>Members Only - Only signed up users can enter it</li>
+          <li>Invite Only - Only invited users or staff may enter it</li>
+        </ul>
       </section>
-      <section data-bespoke-hash="named-route">
-        <h2>Named Route</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a></h3>
-        <p>Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.</p>
+      <section>
+        <h1>Playback controlled</h1>
+        <p>If playback is controlled/restricted within a room, the currently playing media can only be modified by certain users.</p>
+        <p>This allows owners to only let people they know to change the playback... etc.</p>
+      </section>
+      <section>
+        <p>In a room, there are several user classes</p>
+        <ul>
+          <li>Owners</li>
+          <li>Managers</li>
+          <li>Bouncers</li>
+          <li>DJs</li>
+          <li>VIPs - Can enter an invite only room</li>
+          <li>Standard - This is anyone who is not a VIP or staff</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Owners</h1>
+        <ul>
+          <li>They can change another users type within the room</li>
+          <li>They can modify the current playback </li>
+          <li>They can moderate a room (kick users, mute them, etc.)</li>
+          <li>They can also change a rooms type</li>
+          <li>They are for managing everything within a room</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Managers</h1>
+        <ul>
+          <li>They can make any stardard user a Bouncer, DJ, or VIP</li>
+          <li>They can modify the current playback</li>
+          <li>They can moderate a room (kick users, mute them, etc.)</li>
+          <li>They are for managing staff within a room</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Bouncers</h1>
+        <ul>
+          <li>They can make any stardard user a VIP</li>
+          <li>They can't modify the current playback</li>
+          <li>They can moderate a room (kick users, mute them, etc.)</li>
+          <li>They are for managing invited users within a room</li>
+        </ul>
+      </section>
+      <section>
+        <h1>DJs</h1>
+        <ul>
+          <li>They can't modify any users class</li>
+          <li>They can modify the current playback</li>
+          <li>They can't moderate a room (kick users, mute them, etc.)</li>
+          <li>They are only for controlling playback</li>
+        </ul>
+      </section>
+      <section>
+        <h1>VIPs</h1>
+        <p>Created to allow non-staff entry into an invite only room</p>
+        <h1>Standard</h1>
+        <p>Anoyone that is not a member of staff or a VIP, is a standard user</p>
       </section>
       <section data-bespoke-backdrop="emphatic" class="emphatic-text">
-        <h2>Emphatic Slide!</h2>
-        <h3>Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a></h3>
+        <h1>What technology is used, and why is it used?</h1>
+        <h2>Monolithic!</h2>
+        <h2>Built with node.js!</h2>
+        <h2>React.js!</h2>
+        <h2>Websockets!</h2>
+        <h2>NoSQL Database!</h2>
       </section>
       <section>
-        <h2 class="bullet">Just the beginning...</h2><br>
+        <h1>Why Monolithic?</h1>
+        <h2><i>Because it works</i></h2>
         <ul>
-          <li>Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em></li>
-          <li>Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em></li>
-          <li>Edit JavaScript in <em>'src/scripts/main.js'</em></li>
-        </ul><br>
-        <ul>
-          <li><strong>Enjoy! :)</strong><a href="http://twitter.com/markdalgleish"> -@markdalgleish</a></li>
+          <li>Because I know it</li>
+          <li><a href="http://martinfowler.com/bliki/MonolithFirst.html">Because Martin Fowler says so</a></li>
+          <li>The alternative is only recommended to use when your project gets big</li>
+          <li><i>Really big</i></li>
         </ul>
+      </section>
+      <section>
+        <h1>What is the alternative? how does it differ?</h1>
+        <p>The alternative is Microservices, a practice whereby you break down all functionality into seperate running processes/services</p>
+        <p>Monoliths just keep this functionality in a single process</p>
+        <p>Microservices add a lot of complexity with sending messages to and from services</p>
+        <p>Monoliths... don't</p>
+      </section>
+      <section>
+        <h1>Microservices only solve a scaling issues</h1>
+        <p>It should only be used when you need to run many instances at the same time to handle the amount of users connecting to the service</p>
+      </section>
+      <section>
+        <h1>A nice illustration</h1>
+        <h4>via Martin Fowler</h4><img src="images/microservices-vs-monoliths.jpg" style="width:50%;height:50%">
+      </section>
+      <section>
+        <h1>Why Node.js?</h1>
+        <ul>
+          <li>I compared Node, Python, Ruby, C++, Java and GoLang</li>
+          <li>I know Node, and using it would allow me to use a single language for everything</li>
+          <li>Python, Ruby and C++ are all good languages, but I don't know them like I know node</li>
+          <li>I know Java, but, I dislike the amount of code required compared to node</li>
+          <li>Go is getting popular and looks good. But I don't know it</li>
+          <li>I would have liked to use Go because it looks so promising, but because I don't have enough time to learn a new language and because I know node and it allows me to use javascript for everything, it was my chosen technology.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>My comparison wordcloud</h2><img src="images/comparison-wordcloud.png" style="height:50%;width50%;">
+      </section>
+      <section>
+        <h1>Why React.js?</h1>
+        <ul>
+          <li>I compared React, Angular, Backbone and Ember</li>
+          <li>Angular is popular, but there are two very different versions, 1 and 2</li>
+          <li>Backbone and Ember are not as popular, but are similar to angular</li>
+          <li>They promote the MVC approach</li>
+          <li>React is getting very popular right now</li>
+          <li>It promotes a different approach, using something developed for react, called flux.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>What is MVC?</h2>
+        <p>MVC works on the principle that that all application data which needs to be used is stored or accessed from the Model component. However, both Views and Controllers can interact with the Model component and modify that data, so it can lead to the View and Controller having different local data within them, causing display/functionality errors when they interact.</p><img src="images/about-mvc.jpg" style="width:30%;height:30%">
+      </section>
+      <section>
+        <h2>What is flux?</h2>
+        <p>A single “dispatcher” has a registry of all the data- stores which require data updates when certain events or actions occur. These data-stores then have associated views which render the data they contain. These views can then send events to the dispatcher. This will keep all data consistent, so there should be no display errors like with MVC.</p><img src="images/about-flux.jpg" style="width:30%;height:30%">
+      </section>
+      <section>
+        <h1>Conclusion</h1>
+        <p>Coming into this, I was new to both mvc and flux approaches. </p>
+        <p>I have decided that because of my lack of familiarity with any of the available tools, to choose the one that seems like the best fit, while also beig quite popular.</p>
+        <p>It seems like flux is very well suited for an event based system, which the media synchronisation functionality is.</p>
+        <p>And react is popular...</p>
+      </section>
+      <section>
+        <h1>Why WebSockets?</h1>
+        <h4>I compared WebSockets and WebRTC, and I originally wanted to use WebRTC, But...</h4>
+        <ul>
+          <li class="nd">Using WebSockets, all realtime messages must go through my server... not ideal.</li>
+          <li class="nd">Using WebRTC, Clients connect directly together in a peer-to-peer fashion. #winning</li>
+          <li class="nd">I was already familiar with WebSockets, but I needed to investigate WebRTC to see if it would work</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Why not WebRTC then?</h1>
+        <ul>
+          <li class="nd">I interviewed a google developer expert on WebRTC(<a href="https://developers.google.com/experts/people/dan-jenkins">Dan Jenkins</a>) to ask his opinion on using WebRTC for my project.</li>
+          <li class="nd">He told me that in a realtime communication platform, you should only expect WebRTC to handle 7-20 people <strong>at most</strong> connecting together</li>
+          <li class="nd">This severely limits the amount of users that could connect to a room</li>
+        </ul>
+      </section>
+      <section>
+        <h1>So I decided to stick with WebSockets over WebRTC</h1>
+        <p>because there is potentially no limit to the amount of people who can connect</p><img src="images/sadface.png">
+      </section>
+      <section>
+        <h1>Why a NoSQL server?</h1>
+        <h2>Because MongoDB works really well with node.js, and allows me to use javascript on my database too</h2>
+        <h4>Also, it stores stuff in a format pretty similar to JSON</h4>
+      </section>
+      <section>
+        <h1>A mock up of a possible database schema</h1><img src="images/dbschema.png" style="width:50%;height:50%">
+        <h4>Note: Not really neccessary on a NoSQL database, but I wanted a logical model for reference anyway</h4>
+      </section>
+      <section>
+        <h1>Additional tools in use</h1>
+        <ul>
+          <li class="nd">Hapi - It makes node.js server development easier</li>
+          <li class="nd">Radium - A presentation technology, similar to bootstrap, that is designed to work with react in the UI</li>
+          <li class="nd">Socket.io - A tool to make WebSocket development easier by giving a nice standardised API on the server and the client side (in the UI)</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Now onto the how...</h1>
+        <h2>My Design and Plans for the service</h2>
+      </section>
+      <section>
+        <h1>Well, here is a table of how I expected users to want to use this system</h1><img src="images/UserStories.png" style="width:50%;height:50%">
+      </section>
+      <section>
+        <h2>I've already shown how stuff is kept in sync previously</h2>
+        <h2>I have completed a mathemathical representation in Z Notation of the services permission system for another module</h2>
+        <h2><a href="https://mega.nz/#!JcRVhKTK!wz8OL7XPI-pO7MRKI6bbbq3_x28Ji2NUAPVQuKiC22U">Available here</a></h2>
+        <h4>This pretty much covers the majority of use cases as they relate to permissions based around media playback</h4>
+      </section>
+      <section>
+        <h1>Keeping things in synchronisation</h1>
+        <ul>
+          <li class="nd">This is done by sending sync messages to users in a room</li>
+          <li class="nd">When a user enter a room, they get the current plackback time from the server</li>
+          <li class="nd">Whenever a user modifies the current playback time, all other users in the room get a message with this new time</li>
+          <li class="nd">Whenever new media is added to the queue, information about the added media is sent to connected users</li>
+          <li class="nd">Whenever stuff is moved around in the queue, that information is sent to all connected user</li>
+          <li class="nd">Because all of these messages go through my server, the server can store relevant data in the database, eg, when the queue is modified</li>
+          <li class="nd">When no one is in a room, the playback time goes back to 0, so when a new user connects, the media starts fresh</li>
+        </ul>
+      </section>
+      <section>
+        <h1>I haven't built the permissions system yet.</h1><br>
+        <h4>However, I have mocked up how my UI will interact with it</h4>
+      </section>
+      <section>
+        <h1>UI Mockups</h1>
+        <h4>I have completed the majority of the design of my UI</h4>
+        <p>In the next few slides I will cover these mock ups and the layouts which I have envisioned</p><br><br>
+        <h6>These mockups are built with bootstrap and jquery</h6>
+      </section>
+      <section>
+        <h1>Heres the rooms mockup!</h1><iframe width="100%" height="500" src="//jsfiddle.net/thekemkid/5hesjzkj/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       </section>
     </article>
     <script src="build/build.js"></script>
