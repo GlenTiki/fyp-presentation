@@ -228,10 +228,8 @@
           <li class="nd">This is done by sending sync messages to users in a room</li>
           <li class="nd">When a user enter a room, they get the current plackback time from the server</li>
           <li class="nd">Whenever a user modifies the current playback time, all other users in the room get a message with this new time</li>
-          <li class="nd">Whenever new media is added to the queue, information about the added media is sent to connected users</li>
-          <li class="nd">Whenever stuff is moved around in the queue, that information is sent to all connected user</li>
+          <li class="nd">Whenever the queue is modified, the information is sent to connected users</li>
           <li class="nd">Because all of these messages go through my server, the server can store relevant data in the database, eg, when the queue is modified</li>
-          <li class="nd">When no one is in a room, the playback time goes back to 0, so when a new user connects, the media starts fresh</li>
         </ul>
       </section>
       <section>
@@ -257,7 +255,7 @@
         <p>The main content composes the components of the different pages to build the ui</p>
       </section>
       <section>
-        <h1>The pages</h1>
+        <h1>Some of the pages</h1>
         <ul>
           <li>Landing page</li>
           <li>Sign up/in page</li>
@@ -265,16 +263,17 @@
           <li>Find a room pages (locally or with search)</li>
           <li>Your profile pages</li>
           <li>a page for creating a room</li>
-        </ul>
+        </ul><br>
+        <h4>Refer to the report to see all pages</h4>
       </section>
       <section>
-        <h1>Heres the mockup for a room! (navbar sign in, different components together)</h1><iframe width="100%" height="500" src="//jsfiddle.net/thekemkid/5hesjzkj/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        <h1>Heres the mockup for a room (navbar signed in, different components together)</h1><iframe width="100%" height="500" src="//jsfiddle.net/thekemkid/5hesjzkj/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       </section>
       <section>
         <h2>Heres a mockup with a navbar for a signed out user</h2><iframe width="100%" height="300" src="//jsfiddle.net/thekemkid/54m1dtg6/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       </section>
       <section>
-        <h2>And a mockup of the signin component, which will be on several pages (and will also have a page to itself)</h2><iframe width="100%" height="500" src="//jsfiddle.net/thekemkid/srda3hs9/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        <h2>And a mockup of the signed in component, which will be on several pages (and will also have a page to itself)</h2><iframe width="100%" height="500" src="//jsfiddle.net/thekemkid/srda3hs9/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       </section>
       <section>
         <h2>Finding rooms in your area</h2><iframe width="100%" height="300" src="//jsfiddle.net/thekemkid/etbtqs8p/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
